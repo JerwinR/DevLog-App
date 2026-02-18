@@ -70,7 +70,6 @@ export const rateLimiter = new RateLimiter(10, 60000); // 10 attempts per minute
  */
 export class SecureStorage {
   private static readonly STORAGE_KEY_PREFIX = 'devlog_';
-  private static readonly VERSION = '1.0';
 
   static setItem(key: string, value: string): void {
     try {

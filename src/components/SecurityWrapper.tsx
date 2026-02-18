@@ -4,14 +4,12 @@
  */
 
 import { useEffect, ReactNode } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 interface SecurityWrapperProps {
   children: ReactNode;
 }
 
 export default function SecurityWrapper({ children }: SecurityWrapperProps) {
-  const navigate = useNavigate();
 
   useEffect(() => {
     // Check for localStorage availability

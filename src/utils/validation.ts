@@ -12,7 +12,6 @@ export const MAX_LENGTHS = {
 } as const;
 
 // Allowed characters patterns
-const SAFE_TEXT_PATTERN = /^[\p{L}\p{N}\p{P}\p{Z}\p{S}]*$/u;
 const TAG_PATTERN = /^[a-zA-Z0-9_-]+$/;
 const CATEGORY_PATTERN = /^[a-zA-Z0-9\s_-]+$/;
 
