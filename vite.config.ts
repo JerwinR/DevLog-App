@@ -10,15 +10,12 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  // Security: Disable source maps in production
+  // Security: Disable source maps in production; use esbuild (no extra deps)
   build: {
     sourcemap: false,
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true, // Remove console logs in production
-        drop_debugger: true,
-      },
+    minify: 'esbuild',
+    esbuild: {
+      drop: ['console', 'debugger'],
     },
   },
   // Security headers for dev server
